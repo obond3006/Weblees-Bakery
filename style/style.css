@@ -35,6 +35,10 @@ svg.cart {
     padding: 15px 50px;
 }
 
+h3.menu:hover {
+    color: #A7396A;
+}
+
 header {
     background-color: #DB6D9E;
     margin: 0;
@@ -45,9 +49,9 @@ header {
 .main-page {
     display: flex;
     background-image: url('../image/imageforbackground.png');
-    background-color: #cccccc; /* Used if the image is unavailable */
+    background-color: #E5D7E2; /* Used if the image is unavailable */
     height: 850px; /* You must set a specified height */
-    background-position: center; /* Center the image */
+    background-position: center;
     background-size: cover;
     outline: 1px solid #FFFFFF;
     outline-offset: -20px;
@@ -125,19 +129,16 @@ div.categories, div.about-us, div.reviews, div.video, div.contacts {
 /* About Us */
 
 .about-us-description{
-    width: 100%; 
-    
+    width: 100%;
     box-sizing: border-box;
     border: 1px solid #FFFFFF;
     padding: 1.5%;
     overflow: hidden;
-    text-overflow: ellipsis;
     margin: auto;
 }
 
 .about-us-border {
     width: 100%;
-    
     padding: 1.5%;
     border: 2px solid #FFFFFF;
 }
@@ -151,7 +152,7 @@ div.categories, div.about-us, div.reviews, div.video, div.contacts {
 
 .about-us-grid {
     display: grid;
-    grid-template-columns: 65% 30%;
+    grid-template-columns: 62% 33%;
     column-gap: 5%;
 }
 
@@ -234,7 +235,6 @@ div.contact-item {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    flex-wrap: wrap;
     align-items: center;
     gap: 1%;
     margin: 0.8% 0;
