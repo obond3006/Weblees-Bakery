@@ -5,7 +5,11 @@ body {
 
 /* Header */
 
-nav.menu {
+.burger-menu {
+    display: none;
+}
+
+.menu {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -13,18 +17,6 @@ nav.menu {
     align-items: center;
     padding: 0px;
     gap: 5vw;
-}
-
-div.cart {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px;
-}
-
-svg.cart {
-    margin: 30%;
 }
 
 .menu-links {
@@ -35,13 +27,72 @@ svg.cart {
     padding: 15px 50px;
 }
 
-h3.menu:hover {
+.menu-heading:hover {
     color: #A7396A;
 }
 
 header {
     background-color: #DB6D9E;
     margin: 0;
+}
+
+@media (max-width: 920px) {
+    .menu {
+        display: none;
+    }
+
+    .burger-menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .burger {
+        position: relative;
+        width: 25px;
+        height: 5px;
+        padding: 15px;
+        cursor: pointer;
+    }
+
+    .burger div,
+    .burger::before,
+    .burger::after {
+        position: absolute;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background-color: white;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .burger::before,
+    .burger::after {
+        content: " ";
+    }
+
+    .burger::before {
+        top: 0;
+    }
+
+    .burger::after {
+        bottom: 0;
+    }
+
+    .burger.active div {
+        transform: scale(0);
+    }
+
+    .burger.active::before {
+        top: 45%;
+        transform: rotate(-45deg);
+    }
+    
+    .burger.active::after {
+        bottom: 45%;
+        transform: rotate(45deg);
+    }
 }
 
 /* Main Page */
@@ -293,7 +344,7 @@ h3 {
     margin: auto;
 }
 
-h3.menu {
+.menu-heading {
     color: #FFFFFF;
 }
 
